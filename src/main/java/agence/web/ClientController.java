@@ -21,7 +21,7 @@ public class ClientController extends HttpServlet {
 	private ClientDao clientDao = new ClientDaoSql();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {	//On teste si le paramètre action est présent dans l'url
+    {	
         String action = request.getParameter("action") != null ? request.getParameter("action") : "list";
         //si l'action demandée par le user est la liste des clients
         if (action.equals("list"))
